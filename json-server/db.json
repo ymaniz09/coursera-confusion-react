@@ -7,7 +7,7 @@
       "category": "mains",
       "label": "Hot",
       "price": "4.99",
-      "featured": true,
+      "featured": false,
       "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer."
     },
     {
@@ -39,6 +39,26 @@
       "price": "2.99",
       "featured": false,
       "description": "A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms"
+    },
+    {
+      "id": 4,
+      "name": "Best pizza ever",
+      "image": "images/pizza.png",
+      "category": "mains",
+      "label": "",
+      "price": "10.99",
+      "featured": true,
+      "description": "Pizzas by the slice and whole. It's a savory dish of Italian origin consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients (such as anchovies, mushrooms, onions, olives, pineapple, meat, etc.)"
+    },
+    {
+      "id": 5,
+      "name": "Baked Ziti with Sausage, Peppers, and Broccoli Rabe",
+      "image": "images/ziti.png",
+      "category": "mains",
+      "label": "",
+      "price": "15.99",
+      "featured": true,
+      "description": "Baked ziti has all the hearty, cheesy qualities of a lasagna with a fraction of the effort. This one is inspired by those sausage and pepper subs you get at old-school Italian delis. We added broccoli rabe for some green and bitterness to cut through the rich sausage and cheese. You can drop this off for someone fully baked or just before baking with instructions."
     }
   ],
   "comments": [
@@ -201,6 +221,53 @@
       "comment": "It's your birthday, we're gonna party!",
       "author": "25 Cent",
       "date": "2011-12-02T17:57:28.556094Z"
+    },
+    {
+      "dishId": 0,
+      "rating": "5",
+      "author": "Ygor",
+      "comment": "Love it!",
+      "date": "2020-09-04T02:40:53.266Z",
+      "id": 20
+    },
+    {
+      "dishId": 0,
+      "rating": "4",
+      "author": "Pedro",
+      "comment": "Good",
+      "date": "2020-09-04T02:44:05.863Z",
+      "id": 21
+    },
+    {
+      "dishId": 0,
+      "author": "Lud",
+      "comment": "Too spicy",
+      "date": "2020-09-04T02:44:41.483Z",
+      "id": 22
+    },
+    {
+      "dishId": 4,
+      "rating": "5",
+      "author": "Ygor",
+      "comment": "Delicious",
+      "date": "2020-09-04T02:59:01.899Z",
+      "id": 23
+    },
+    {
+      "dishId": 4,
+      "rating": "5",
+      "author": "Ben",
+      "comment": "You must try it",
+      "date": "2020-09-04T02:59:20.171Z",
+      "id": 24
+    },
+    {
+      "dishId": 4,
+      "rating": "5",
+      "author": "Pedro",
+      "comment": "Never tasted anything like it",
+      "date": "2020-09-04T02:59:54.697Z",
+      "id": 25
     }
   ],
   "promotions": [
