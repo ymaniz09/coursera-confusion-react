@@ -66,3 +66,25 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Installing json-server
+
+`npm install -g json-server`
+
+### Running json-server
+
+Inside folder json-server just run json-server --watch db.json -p 3001 -d 2000
+The following resources will be available:
+- http://localhost:3001/dishes
+- http://localhost:3001/comments
+- http://localhost:3001/promotions
+- http://localhost:3001/leaders
+- http://localhost:3001/feedback
+
+- http://localhost:3001/images/alberto.png
+- http://localhost:3001/images/buffet.png
+- http://localhost:3001/images/elaicheesecake.png
+- http://localhost:3001/images/logo.png
+- http://localhost:3001/images/uthappizza.png
+- http://localhost:3001/images/vadonut.png
+- http://localhost:3001/images/zucchipakoda.png
