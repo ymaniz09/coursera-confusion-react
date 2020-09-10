@@ -128,6 +128,56 @@ export const fetchPromos = () => (dispatch) => {
     .catch(error => dispatch(promosFailed(error.message)));
 }
 
+export const fetchLeaders = () => (dispatch) => {
+  dispatch(leadersLoading(true));
+  return fetch(baseUrl + 'leaders')
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          const error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+        throw new Error(error.message);
+      })
+    .then(response => response.json())
+    .then(leaders => dispatch(addLeaders(leaders)))
+    .catch(error => dispatch(leadersFailed(error.message)));
+}
+
+export const postFeedback = (feedback) => (dispatch) => {
+  return fetch(baseUrl + 'feedback', {
+    method: 'POST',
+    body: JSON.stringify(feedback),
+    headers: {
+      "Content-Type": "application/json"
+    },
+    credentials: "same-origin"
+  })
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          const error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+        throw error;
+      })
+    .then(response => response.json())
+    .then(function(response){
+      alert('Thank you for your feedback! '+ JSON.stringify(response));
+      return console.log(response)
+    })
+    .catch(error =>  { console.log('post feedbacks', error.message);
+      alert('Your feedback could not be posted\nError: '+error.message); });
+};
+
 export const addPromos = (promos) => ({
   type: ActionTypes.ADD_PROMOS,
   payload: promos
@@ -139,5 +189,19 @@ export const promosLoading = () => ({
 
 export const promosFailed = (errMess) => ({
   type: ActionTypes.PROMOS_FAILED,
+  payload: errMess
+});
+
+export const addLeaders = (leaders) => ({
+  type: ActionTypes.ADD_LEADERS,
+  payload: leaders
+});
+
+export const leadersLoading = () => ({
+  type: ActionTypes.LEADERS_LOADING
+});
+
+export const leadersFailed = (errMess) => ({
+  type: ActionTypes.LEADERS_FAILED,
   payload: errMess
 });
